@@ -26,7 +26,42 @@ const producto8 ={
 document.addEventListener("DOMContentLoaded",() =>{
     // Operador OR
     carrito = JSON.parse(sessionStorage.getItem("carrito")) || [];
+    fetchPrueba();
 })
+
+function fetchPrueba(){
+    fetch('/data.json')
+    .then((res)=>res.json())
+    .then((data)=>{
+
+        data.forEach(producto => {
+            let featuredArticles = document.getElementById("featuredArticles");
+            let cards = document.createElement("section");
+            let cardText = document.createElement("div");
+            let cardImg = document.createElement("div");
+            let cardTitle = document.createElement("div");
+            let cardArtist = document.createElement("div");
+            let cardPrice = document.createElement("div");
+            cards.classList.add("cards");
+            cardText.classList.add("card-text");
+            cardImg.classList.add("card-img");
+            cardTitle.classList.add("card-title");
+            cardArtist.classList.add("card-artist");
+            cardPrice.classList.add("card-price");
+
+            cardImg.innerHTML = `<img src=${producto.img}>`;
+            cardArtist.innerHTML = `<h4>${producto.artista}</h4>`;
+            cardTitle.innerHTML = `<h4>${producto.nombre}</h4>`;
+            cardPrice.innerHTML = `<h4>${producto.precio}</h4>`;
+            cardText.appendChild(cardTitle);
+            cardText.appendChild(cardArtist);
+            cardText.appendChild(cardPrice);
+            cards.appendChild(cardImg);
+            cards.appendChild(cardText);
+            featuredArticles.appendChild(cards);
+        });
+    })
+}
 
 function saveCart() { 
     sessionStorage.setItem('carrito', JSON.stringify(carrito));
@@ -177,34 +212,5 @@ const search = () =>{
     }
 }
 
-fetch('/data.json')
-    .then((res)=>res.json())
-    .then((data)=>{
 
-        data.forEach(producto => {
-            let featuredArticles = document.getElementById("featuredArticles");
-            let cards = document.createElement("section");
-            let cardText = document.createElement("div");
-            let cardImg = document.createElement("div");
-            let cardTitle = document.createElement("div");
-            let cardArtist = document.createElement("div");
-            let cardPrice = document.createElement("div");
-            cards.classList.add("cards");
-            cardText.classList.add("card-text");
-            cardImg.classList.add("card-img");
-            cardTitle.classList.add("card-title");
-            cardArtist.classList.add("card-artist");
-            cardPrice.classList.add("card-price");
 
-            cardImg.innerHTML = `<img src=${producto.img}>`;
-            cardArtist.innerHTML = `<h4>${producto.artista}</h4>`;
-            cardTitle.innerHTML = `<h4>${producto.nombre}</h4>`;
-            cardPrice.innerHTML = `<h4>${producto.precio}</h4>`;
-            cardText.appendChild(cardTitle);
-            cardText.appendChild(cardArtist);
-            cardText.appendChild(cardPrice);
-            cards.appendChild(cardImg);
-            cards.appendChild(cardText);
-            featuredArticles.appendChild(cards);
-        });
-    })
