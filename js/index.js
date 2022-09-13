@@ -1,4 +1,4 @@
-function loadProducts(productos){
+function loadProducts(){
     const featuredArticles = document.querySelector("#featuredArticles");
     
     productos.forEach(producto => {
