@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded",()=>{
+    loadProducts();
+})
+
 function loadProducts(productos){
     const featuredArticles = document.querySelector("#featuredArticles");
     
