@@ -1,0 +1,4 @@
+[
+{"nombre":"AM","artista":"Arctic Monkeys","precio":1500, "id":1, "img":"../img/products/amam"},
+{"nombre":"Favourite Worst Nightmare","artista":"Arctic Monkeys","precio":1900, "id":2, "img":"../img/products/amfwn"}
+]

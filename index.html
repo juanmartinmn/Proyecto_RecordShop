@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Record Shop</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- Option 1: Include in HTML -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <header>
+        <div id="header-top">
+            <a href=""><img class="logo" src="./img/logo1.png" alt="logo"></a>
+            <a href="#cart-section"></a>
+            <a data-bs-toggle="offcanvas" href="#shoppingCart" role="button" aria-controls="offcanvasExample"><button><i class="bi bi-cart3"></i></button></a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+
+    <section class="page">
+        <section id="home">
+            <div class="imgSlide"></div>
+            <h2>Featured</h2>
+            <div id="featuredArticles">
+                <article class="cards">
+                    
+                    
+                        
+                        <button class="btnAdd" id="btnAdd1">Add to Cart</button>
+                    </div>
+
+
+            </div>
+        </section>
+
+    <section id="shop">
+        <div id="center-form">
+            <div id="form-container">
+                <form>
+                    <i class="bi bi-search"></i>
+                    <input type="text" id="search-item" placeholder="Search" onkeyup="search()">
+                </form>
+            </div>
+        </div>
+        
+
+        
+        <div class="product-list" id="product-list">
+            <article class="product">
+                <img src="./img/products/amam.jpg" alt="" srcset="">
+                <div class="p-details">
+                    <h2>AM - Arctic Monkeys</h2>
+                    <h3>$ 1500</h3>
+                </div>
+            </article>
+            <article class="product">
+                <img src="./img/products/amfwn.jpg" alt="" srcset="">
+                <div class="p-details">
+                    <h2>Favourite Worst Nightmare - Arctic Monkeys</h2>
+                    <h3>$1900</h3>
+                </div>
+            </article>
+            <article class="product">
+                <img src="./img/products/nirvananevermind.jpg" alt="" srcset="">
+                <div class="p-details">
+                    <h2>Nevermind - Nirvana</h2>
+                    <h3>$2000</h3>
+                </div>
+            </article>
+            <article class="product">
+                <img src="./img/products/radioheadokc.jpg" alt="" srcset="">
+                <div class="p-details">
+                    <h2>OK Computer - Radiohead</h2>
+                    <h3>$3500</h3>
+                </div>
+            </article>
+            <article class="product">
+                <img src="./img/products/oasisknebworth.jpg" alt="" srcset="">
+                <div class="p-details">
+                    <h2>Knebworth 1996 - Oasis</h2>
+                    <h3>$2500</h3>
+                </div>
+            </article>
+            <article class="product">
+                <img src="./img/products/oasiswtsmg.jpg" alt="" srcset="">
+                <div class="p-details">
+                    <h2>(What's the Story) Morning Glory? - Oasis</h2>
+                    <h3>$3000</h3>
+                </div>
+            </article>
+            <article class="product">
+                <img src="./img/products/beatlesabbey.jpg" alt="" srcset="">
+                <div class="p-details">
+                    <h2>Abbey Road - The Beatles</h2>
+                    <h3><del>$1500</del> Out Of Stock</h3>
+                </div>
+            </article>
+            <article class="product">
+                <img src="./img/products/beatleshelp.jpg" alt="" srcset="">
+                <div class="p-details">
+                    <h2>Help! - The Beatles</h2>
+                    <h3><del>$1500</del> Out Of Stock</h3>
+                </div>
+            </article>
+            <article class="product">
+                <img src="./img/products/billyehte.jpg" alt="" srcset="">
+                <div class="p-details">
+                    <h2>Happier Than Ever - Billie Eilish</h2>
+                    <h3><del>$1500</del> Out Of Stock</h3>
+                </div>
+            </article>
+            <article class="product">
+                <img src="./img/products/drakehonev.jpg" alt="" srcset="">
+                <div class="p-details">
+                    <h2>Honestly, Nevermind - Drake</h2>
+                    <h3><del>$1500</del> Out Of Stock</h3>
+                </div>
+            </article>
+            <article class="product">
+                <img src="./img/products/trssomegirls.jpg" alt="" srcset="">
+                <div class="p-details">
+                    <h2>Some Girls - The Rolling Stones</h2>
+                    <h3>$2800</h3>
+                </div>
+            </article>
+            <article class="product">
+                <img src="./img/products/trsstickyfingers.jpg" alt="" srcset="">
+                <div class="p-details">
+                    <h2>Sticky Fingers - The Rolling Stones</h2>
+                    <h3><del>$1500</del> Out Of Stock</h3>                
+                </div>
+            </article>
+            <article class="product">
+                <img src="./img/products/harryshh.jpg" alt="" srcset="">
+                <div class="p-details">
+                    <h2>Harry's House - Harry Styles</h2>
+                    <h3><del>$1500</del> Out Of Stock</h3>                    
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="cart-section">
+        <div>
+            <ul class="discounts"></ul>
+            <ul class="payments"></ul>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="shoppingCart" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Shopping Cart</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul id="cart">
+                        <li id="cartTotal"></li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+
+    
+    <section id="about"></section>
+
+    </section>
+
+    <script src="./js/codigo.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <footer>
+
+    </footer>
+</body>
+</html>

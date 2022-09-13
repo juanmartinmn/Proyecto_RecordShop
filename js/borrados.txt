@@ -1,0 +1,88 @@
+// function listaProductos(productos) {
+//     let lista = '';
+//     for (const producto of productos) {
+//     lista += 'Disco: ' + producto.nombre + '\nBanda/Artista: ' + producto.artista + '\nPrecio: ' + producto.precio + '\n' + "-------------------------------\n"
+//     }
+//     return lista;
+// }
+
+// function calculoCuotas(precio){
+
+//     // En caso de que lo ingresado no sea un numero.
+//     if(isNaN(precio)){
+//         return "ERROR: No es un numero";
+//     }
+
+//     // Convertimos a decimal para poder hacer el calculo.
+//     precio = parseFloat(precio);
+    
+//     // Agregue la funcion .toFixed para limitar la cantidad de decimales.
+//     let resultado = "3 Cuotas: $" + ((precio+(precio * 5,39)/100)/3).toFixed(2) 
+//                     + "\n6 Cuotas: $" + ((precio+(precio * 10.89)/100)/6).toFixed(2) 
+//                     + "\n12 Cuotas: $" + ((precio+(precio * 22.22)/100)/12).toFixed(2) 
+//                     + " \n18 Cuotas: $" + ((precio+(precio * 40.53)/100)/18).toFixed(2) 
+//                     + "\n24 Cuotas: $" + ((precio+(precio *55.85)/100)/24).toFixed(2);
+    
+//     return resultado;
+// }
+
+
+// function buscarProducto(productos,id){
+//     return productos.find(elemento => elemento.id == parseInt(id));
+// }
+
+// function filtroProducto(productos, artista){
+//     return productos.filter(elemento => elemento.artista === artista.toUpperCase());
+// }
+
+// Ciclo while que funciona hasta que el usuario ingrese "ESC".
+// while(entrada != "ESC") {
+
+//     let seleccion = '';
+
+    
+//     // Si la variable "buscar" encuentra el id ingresado un buscamos su precio y se calculan las cuotas, caso contrario da un error al ingresar un id inexistente.
+    
+//     seleccion=prompt("1 para calcular cuotas\n2 para filtrar por artista\n3 aplicar codigo de descuento");
+
+//     if (seleccion==1) {
+//         let buscar = buscarProducto(productos, prompt("1. AM - Arctic Monkeys\n2. Favourite Worst Nightmare - Arctic Monkeys\n3. Nevermind - Nirvana\n4. Knebworth 1996 - Oasis\n5. (What's The Story) Morning Glory? - Oasis\n6. OK Computer - Radiohead\n\nIngrese la id del producto"));
+        
+//         if(buscar!=undefined){
+//             alert(calculoCuotas(buscar.precio));
+//         } else{
+//             alert("ERROR: ID INEXISTENTE")
+//         }
+//     } else if(seleccion==2){
+//         let filtrar = filtroProducto(productos, prompt("Ingrese una banda o artista"));
+        
+//         if (filtrar.length > 0) {
+//             alert(listaProductos(filtrar));
+//         } else {
+//             alert("No se encontraron resultados");
+//         }
+//     } else if(seleccion==3){
+//         entrada = prompt("Ingrese un codigo de descuento\nRECORDSHOP = 20% OFF\nJUAN = 10% OFF");
+
+//         if (entrada=="RECORDSHOP") {
+//             precios.innerHTML = `CODIGO DE DESCUENTO APLICADO: ${entrada}`;
+//             for (const producto of productos) {
+//                 producto.precio = parseFloat((producto.precio * 0.80).toFixed(2));
+//                 let li = document.createElement("li");
+//                 li.innerHTML = `${producto.nombre} - ${producto.artista} ${producto.precio}`
+//                 precios.appendChild(li);
+//             }
+//         } else if(entrada=="JUAN"){
+//             precios.innerHTML = `CODIGO DE DESCUENTO APLICADO: ${entrada}`;
+//             for (const producto of productos) {
+//                 producto.precio = parseFloat((producto.precio * 0.90).toFixed(2));
+//                 let li = document.createElement("li");
+//                 li.innerHTML = `${producto.nombre} - ${producto.artista} $${producto.precio}`
+//                 precios.appendChild(li);
+//             }
+//         } else{
+//             alert("ERROR: CODIGO INEXISTENTE");
+//         }
+//     }
+//     entrada = prompt("¿Desea realizar otra accion? \nIngrese (ESC) para finalizar o cualquier caracter para continuar")
+// } 
