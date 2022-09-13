@@ -1,28 +1,51 @@
 function loadProducts(){
     const featuredArticles = document.querySelector("#featuredArticles");
+    const productList = document.querySelector("#product-list");
     
     productos.forEach(producto => {
         let prod = document.createElement("div");
-        prod.setAttribute('id', 'row_'+producto.id); 
+        let prodcards = document.createElement("div");
+
+        prod.setAttribute('id', 'row_'+producto.id);
+        prodcards.setAttribute('id', 'row_'+producto.id);
+
         
-        prod.innerHTML= `   <article class="cards">
+        prod.innerHTML=`
+                        <article class="featuredProduct">
+                            <div class=cards>
                             <img class="card-img" src="./img/products/${producto.img}">
-                            <div class="card-text">
-                                <div class="card-title">
-                                    <h4>${producto.nombre}</h4> 
-                                </div>
-                                <div class="card-artist">
-                                    <h4>${producto.artista}</h4>                 
-                                </div>
-                                <div class="card-price">
-                                    <h4>$${producto.precio} ARS</h4>
-                                </div>
-                                <a href="javascript:addToCart(${producto.id},${cartIndex})"> <button class="btnAdd">Add to Cart</button> </a>
+                                <div class="card-text">
+                                    <div class="card-title">
+                                        <h4>${producto.nombre}<br><b>${producto.artista}</b></h4> 
+                                    </div>
+                                    <div class="card-price">
+                                        <h4>$${producto.precio} ARS</h4>
+                                    </div>
+                                    <a href="javascript:addToCart(${producto.id},${cartIndex})" class=btnAddA> <button class="btnAdd">Add to Cart</button> </a>
+                                    </div>
                             </div>
-                            </article>` 
+                        </article>`
         
+        prodcards.innerHTML=`
+                            <article class="product">
+                                <div class=cards>
+                                <img class="card-img" src="./img/products/${producto.img}">
+                                    <div class="card-text">
+                                        <div class="card-title">
+                                            <h4>${producto.nombre}<br><b>${producto.artista}</b></h4> 
+                                        </div>
+                                        <div class="card-price">
+                                            <h4>$${producto.precio} ARS</h4>
+                                        </div>
+                                        <a href="javascript:addToCart(${producto.id},${cartIndex})" class=btnAddA> <button class="btnAdd">Add to Cart</button> </a>
+                                        </div>
+                                </div>
+                            </article>`
+        
+        productList.appendChild(prodcards);
         featuredArticles.appendChild(prod);
-})
+        
+}) 
 }
 
 function addToCart(id,cartIndex){
@@ -61,10 +84,10 @@ const search = () =>{
     const searchbox = document.getElementById("search-item").value.toUpperCase();
     const storeitems = document.getElementById("product-list");
     const product = document.querySelectorAll(".product");
-    const pname = storeitems.getElementsByTagName("h2");
+    const pname = storeitems.getElementsByTagName("h4");
 
     for (let index = 0; index < pname.length; index++) {
-        let match = product[index].getElementsByTagName("h2")[0];
+        let match = product[index].getElementsByTagName("h4")[0];
         
         if (match) {
             // Operador OR
