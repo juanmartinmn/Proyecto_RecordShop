@@ -1,4 +1,16 @@
-[
+class Productos{
+    constructor(id,nombre,artista,precio,img,featured){
+        this.id = id;
+        this.nombre = nombre;
+        this.artista = artista;
+        this.precio = precio;
+        this.img = img;
+        this.featured = featured;
+    }
+}
+
+const productos = [
+
     {
         "id": 0,
         "nombre": "AM",
@@ -36,4 +48,4 @@
         "img": "oasiswtsmg.jpg",
         "destacado": 0
     }
-]
+];

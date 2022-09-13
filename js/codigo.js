@@ -30,35 +30,32 @@ document.addEventListener("DOMContentLoaded",() =>{
 })
 
 function fetchPrueba(){
+    const featuredArticles = document.querySelector("#featuredArticles");
     fetch('/data.json')
     .then((res)=>res.json())
     .then((data)=>{
 
         data.forEach(producto => {
-            let featuredArticles = document.getElementById("featuredArticles");
-            let cards = document.createElement("section");
-            let cardText = document.createElement("div");
-            let cardImg = document.createElement("div");
-            let cardTitle = document.createElement("div");
-            let cardArtist = document.createElement("div");
-            let cardPrice = document.createElement("div");
-            cards.classList.add("cards");
-            cardText.classList.add("card-text");
-            cardImg.classList.add("card-img");
-            cardTitle.classList.add("card-title");
-            cardArtist.classList.add("card-artist");
-            cardPrice.classList.add("card-price");
-
-            cardImg.innerHTML = `<img src=${producto.img}>`;
-            cardArtist.innerHTML = `<h4>${producto.artista}</h4>`;
-            cardTitle.innerHTML = `<h4>${producto.nombre}</h4>`;
-            cardPrice.innerHTML = `<h4>${producto.precio}</h4>`;
-            cardText.appendChild(cardTitle);
-            cardText.appendChild(cardArtist);
-            cardText.appendChild(cardPrice);
-            cards.appendChild(cardImg);
-            cards.appendChild(cardText);
-            featuredArticles.appendChild(cards);
+            let prod = document.createElement("div");
+            prod.setAttribute('id', 'row_'+producto.id); 
+            
+            prod.innerHTML= `   <article class="cards">
+                                <img class="card-img" src="./img/products/${producto.img}">
+                                <div class="card-text">
+                                    <div class="card-title">
+                                        <h4>${producto.nombre}</h4> 
+                                    </div>
+                                    <div class="card-artist">
+                                        <h4>${producto.artista}</h4>                 
+                                    </div>
+                                    <div class="card-price">
+                                        <h4>$${producto.precio} ARS</h4>
+                                    </div>
+                                    <a href="javascript:addToCart(${producto.id},${cartIndex})"> <button class="btnAdd">Add to Cart</button> </a>
+                                </div>
+                                </article>` 
+            
+            featuredArticles.appendChild(prod);
         });
     })
 }
