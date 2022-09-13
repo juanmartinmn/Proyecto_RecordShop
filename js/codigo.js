@@ -67,23 +67,6 @@ function saveCart() {
     sessionStorage.setItem('carrito', JSON.stringify(carrito));
 }
 
-// Funcion para aplicar los toasts, dentro de cada btnAdd.
-function toast(){
-    Toastify({
-        text: "Added to cart",
-        duration: 3000,
-        newWindow: true,
-        close: true,
-        gravity: "top", // `top` or `bottom`
-        position: "right", // `left`, `center` or `right`
-        stopOnFocus: true, // Prevents dismissing of toast on hover
-        style: {
-        background: "#1a6947",
-        },
-        onClick: function(){} // Callback after click
-    }).showToast();
-}
-
 
 // Array de productos de la clase Productos.
 productos.push(new Productos("AM","ARCTIC MONKEYS",1500,1));
