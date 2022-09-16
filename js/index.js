@@ -1,3 +1,10 @@
+document.addEventListener("DOMContentLoaded",() =>{
+    carrito = JSON.parse(sessionStorage.getItem("carrito")) || [];
+    cartIndex = JSON.parse(sessionStorage.getItem("cartIndex")) || [];
+    restoreCart();
+    // fetchData();
+})
+
 function loadProducts(){
     const featuredArticles = document.querySelector("#featuredArticles");
     const productList = document.querySelector("#product-list");
