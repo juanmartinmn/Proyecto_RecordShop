@@ -27,7 +27,7 @@ const productos = [
         "precio": 1900,
         "stock": 50,
         "img": "amfwn.jpg",
-        "destacado": 1
+        "destacado": 0
     },
 
     {
@@ -46,6 +46,6 @@ const productos = [
         "precio": 2500,
         "stock": 50,
         "img": "oasiswtsmg.jpg",
-        "destacado": 0
+        "destacado": 1
     }
 ];

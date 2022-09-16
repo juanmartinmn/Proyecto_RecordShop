@@ -9,22 +9,27 @@ function loadProducts(){
         prod.setAttribute('id', 'row_'+producto.id);
         prodcards.setAttribute('id', 'row_'+producto.id);
 
+        if (producto.destacado==1) {
+            prod.innerHTML=`
+            <article class="featuredProduct">
+                <div class=cards>
+                <img class="card-img" src="./img/products/${producto.img}">
+                    <div class="card-text">
+                        <div class="card-title">
+                            <h4>${producto.nombre}<br><b>${producto.artista}</b></h4> 
+                        </div>
+                        <div class="card-price">
+                            <h4>$${producto.precio} ARS</h4>
+                        </div>
+                        <a href="javascript:addToCart(${producto.id},${cartIndex})" class=btnAddA> <button class="btnAdd">Add to Cart</button> </a>
+                        </div>
+                </div>
+            </article>`
+            featuredArticles.appendChild(prod);
+        }
+
         
-        prod.innerHTML=`
-                        <article class="featuredProduct">
-                            <div class=cards>
-                            <img class="card-img" src="./img/products/${producto.img}">
-                                <div class="card-text">
-                                    <div class="card-title">
-                                        <h4>${producto.nombre}<br><b>${producto.artista}</b></h4> 
-                                    </div>
-                                    <div class="card-price">
-                                        <h4>$${producto.precio} ARS</h4>
-                                    </div>
-                                    <a href="javascript:addToCart(${producto.id},${cartIndex})" class=btnAddA> <button class="btnAdd">Add to Cart</button> </a>
-                                    </div>
-                            </div>
-                        </article>`
+
         
         prodcards.innerHTML=`
                             <article class="product">
@@ -43,7 +48,7 @@ function loadProducts(){
                             </article>`
         
         productList.appendChild(prodcards);
-        featuredArticles.appendChild(prod);
+        
         
 }) 
 }

@@ -22,69 +22,171 @@ body::-webkit-scrollbar-thumb{
     border-radius: 1em;
     border: 1.5px solid white;
 } */
+
+/* INDEX */
+
 /* header */
 header{
-    background-color: #faf2e9;
-    width: 100%;
+    background-color: transparent;
 }
 
-header #header-top{
+header #navbar{
     display: flex;
-    justify-content: space-between;
-    background-color: #faf2e9;
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent;
+    height: 90px;
+    width: 100%;
+    position: fixed;
+    z-index: 3;
 }
 
-header #header-top button{
+header #navbar button{
     background-color: transparent;
     border: none;
     font-size: 42px;
-    margin-right: 15px;
     color: #1a6947;
 }
 
 header .logo{
-    height: 90px;
+    height:3em;
 }
 
-header nav{
-    background-color: #1a6947;
-    height: 40px;
-    width: 100%;
-}
 
 header nav ul{
     display: flex;
     justify-content: center;
-    padding: 5px;
+    align-items: center;
     list-style: none;
 }
 
 header nav ul li a{
     text-decoration: none;
-    color: #faf2e9;
-    padding: 20px;
+    color: #1a6947;
+    padding: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
-header nav ul a:hover{
-    text-decoration: underline;
+header a:hover{
     color: black;
 }
+
+header #greenLine{
+    background-color: #1a6947;
+    color: #1a6947;
+    width: 100%;
+    height: 5px;
+}
+
 /*  */
+
+#home{
+    background-image: url('../img/FONDO4.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    padding-top: 100px;
+}
+
+#home h1{
+    color: #faf2e9;
+}
+
 .page{
     padding: 10px 10% 0 10%;
     background-color:rgb(240, 240, 240)
 }
 
-.welcomeMsg{
-    display: flex;
-    justify-content: center;
+#gridSec{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-auto-flow: column;
 }
 
-.imgSlide{
-    background-image: url("../img/homepic.png");
-    background-repeat: no-repeat;
+#grid0{
+    grid-row: 1/2;
+    grid-column: 1/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/oasisfeatured.png');
     background-size: cover;
-    height: 50vh;
+    background-repeat: no-repeat;
+    background-position: top right;
+    color: whitesmoke;
+}
+
+#grid1{
+    background-color: red;
+    grid-row: 2/3;
+    grid-column: 1/2;
+    background-image: url('../img/e8bb4607ae10810e775823adf8f97eb4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+
+}
+
+#grid2{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+#grid3{
+    grid-row: 3/4;
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+#grid4-img{
+    background-color:black;
+    grid-row: 3/4;
+    grid-column: 2/3;
+    background-image: url('../img/products/oasisknebworth.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    z-index: 0;
+}
+
+#grid4-text{
+    grid-row: 3/4;
+    grid-column: 2/3;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+#featuredImg{
+    height: 150px;
+}
+
+#featuredParent{
+    display: flex;
+    grid-column: 1/3;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #featuredArticles{
@@ -92,6 +194,8 @@ header nav ul a:hover{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    grid-row: 4/5;
+    grid-column: 1/3;
 }
 
 
@@ -129,7 +233,7 @@ header nav ul a:hover{
 #shop{
     background-color: white;
     padding: 10px;
-    height: 50vh;
+    height: 100vh;
 }
 
 #shop #center-form{
@@ -240,6 +344,7 @@ header nav ul a:hover{
     background-color: #faf2e9;
     color: #1a6947;
     border: 2px solid #1a6947;
+    font-weight: bold;
 }
 
 
@@ -289,4 +394,8 @@ header nav ul a:hover{
     font-size: large;
 }
 
+/* PAYMENT */
 
+#payment{
+    margin-top: 90px;
+}

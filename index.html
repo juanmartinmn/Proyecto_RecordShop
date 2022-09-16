@@ -11,28 +11,54 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"></head>
 <body>
     <header>
-        <div id="header-top">
-            <a href=""><img class="logo" src="./img/logo1.png" alt="logo"></a>
-            <a href="#cart-section"></a>
+        <div id="navbar">
+
+            <nav>
+                <ul>
+                    <li><a href="#shop">STORE</a></li>
+
+                </ul>
+            </nav>
+            <a href="./index.html"><img class="logo" src="./img/logo.png" alt="logo"></a>
             <a data-bs-toggle="offcanvas" href="#shoppingCart" role="button" aria-controls="offcanvasExample"><button><i class="bi bi-cart3"></i></button></a>
         </div>
-
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#shop">Shop</a></li>
-                <li><a href="#about">About</a></li>
-            </ul>
-        </nav>
+        <div id="greenLine"></div>
     </header>
-
     
+    <section id="home">
+
+    </section>
+
 
     <section class="page">
-        <section id="home">
-            <div class="imgSlide"></div>
-            <h2>Featured</h2>
-            <div id="featuredArticles"></div>  
+
+        
+        <section id="gridSec">
+            <div id="grid0">
+                <h1>Album Of The Week: <br> Oasis Knebworth 1996</h1>
+            </div>
+            <div id="grid1"></div>
+            <div id="grid2">
+                <p>
+                    On August 10 and 11, 1996, 250,000 music fans got stoned at Knebworth Park to see Oasis in two record-breaking, era-defining shows. The concerts were a watershed. Tickets sold out in less than a day, as more than 2% of the UK population tried to buy tickets. It was a time when the UK was slowly recovering from a decade of recession. The growing reliance on art and culture ushered in Cool Britannia, and Oasis's meteoric rise reflected how cool and confident the country felt. 
+                </p>
+            </div>
+            <div id="grid3">
+                <p>With a setlist firing off classics one after another—including "Champagne Supernova," "Wonderwall" and "Don't Look Back In Anger"—the Knebworth concerts were the pinnacle of the band's success and an event that marked that generation. Oasis Knebworth 1996 is the story of that weekend and the special relationship between Oasis and their fans that made it possible. It is told from the point of view of the fans in attendance, along with interviews with the band and concert organizers. Directed by Jake Scott from exclusive, never-before-seen footage of the concert, Oasis Knebworth 1996 is a joyful and sometimes poignant cinematic celebration of one of the biggest concerts of the last 25 years.</p>
+            </div>
+            <div id="grid4-img">
+            </div>
+            <div id="grid4-text">
+                <article id="featuredCard">
+                    <img src="./img/products/oasisknebworth.jpg" alt="" srcset="" id="featuredImg">
+                    <a href="javascript:addToCart(productos[2].id,cartIndex)" class="btnAddA"> <button class="btnAdd">Add to Cart</button> </a>
+                </article>
+            </div>
+            <div id="featuredParent">
+                <h2>More by Oasis</h2>
+                <div id="featuredArticles"></div> 
+            </div>
+            
         </section>
 
     <section id="shop">
@@ -75,6 +101,7 @@
 
 
     <footer>
+        <p>© 2015 - The Record Shop</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous" defer></script>

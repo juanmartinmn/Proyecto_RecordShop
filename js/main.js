@@ -6,11 +6,64 @@ let cartTotal = 0;
 let cartCounter = 1;
 let cartIndex = 0;
 
+// El fetch al json local no me funciona por alguna razon, lo dejo aca por si quieren probarlo.
+
 document.addEventListener("DOMContentLoaded",() =>{
     carrito = JSON.parse(sessionStorage.getItem("carrito")) || [];
     cartIndex = JSON.parse(sessionStorage.getItem("cartIndex")) || [];
     restoreCart();
+    // fetchData();
 })
+
+// function fetchData(){
+//     // fetch('/data.json')
+// //     .then((res)=>res.json())
+// //     .then((data)=>{
+
+// //         data.forEach(producto => {
+//                 // let prod = document.createElement("div");
+//                 // let prodcards = document.createElement("div");
+
+//                 // prod.setAttribute('id', 'row_'+producto.id);
+//                 // prodcards.setAttribute('id', 'row_'+producto.id);
+
+//                 // if (producto.destacado==1) {
+//                 //     prod.innerHTML=`
+//                 //     <article class="featuredProduct">
+//                 //         <div class=cards>
+//                 //         <img class="card-img" src="./img/products/${producto.img}">
+//                 //             <div class="card-text">
+//                 //                 <div class="card-title">
+//                 //                     <h4>${producto.nombre}<br><b>${producto.artista}</b></h4> 
+//                 //                 </div>
+//                 //                 <div class="card-price">
+//                 //                     <h4>$${producto.precio} ARS</h4>
+//                 //                 </div>
+//                 //                 <a href="javascript:addToCart(${producto.id},${cartIndex})" class=btnAddA> <button class="btnAdd">Add to Cart</button> </a>
+//                 //                 </div>
+//                 //         </div>
+//                 //     </article>`
+//                 //     featuredArticles.appendChild(prod);
+//                 // }
+//                 // prodcards.innerHTML=`
+//                 //                     <article class="product">
+//                 //                         <div class=cards>
+//                 //                         <img class="card-img" src="./img/products/${producto.img}">
+//                 //                             <div class="card-text">
+//                 //                                 <div class="card-title">
+//                 //                                     <h4>${producto.nombre}<br><b>${producto.artista}</b></h4> 
+//                 //                                 </div>
+//                 //                                 <div class="card-price">
+//                 //                                     <h4>$${producto.precio} ARS</h4>
+//                 //                                 </div>
+//                 //                                 <a href="javascript:addToCart(${producto.id},${cartIndex})" class=btnAddA> <button class="btnAdd">Add to Cart</button> </a>
+//                 //                                 </div>
+//                 //                         </div>
+//                 //                     </article>`
+//                 // productList.appendChild(prodcards);
+// //         });
+// //     })
+// }
 
 function saveCart() { 
     sessionStorage.setItem('carrito', JSON.stringify(carrito));
@@ -47,37 +100,8 @@ function removeItem(i){
     restoreCart();
 }
 
-// fetch('/data.json')
-//     .then((res)=>res.json())
-//     .then((data)=>{
 
-//         data.forEach(producto => {
-//             let featuredArticles = document.getElementById("featuredArticles");
-//             let cards = document.createElement("section");
-//             let cardText = document.createElement("div");
-//             let cardImg = document.createElement("div");
-//             let cardTitle = document.createElement("div");
-//             let cardArtist = document.createElement("div");
-//             let cardPrice = document.createElement("div");
-//             cards.classList.add("cards");
-//             cardText.classList.add("card-text");
-//             cardImg.classList.add("card-img");
-//             cardTitle.classList.add("card-title");
-//             cardArtist.classList.add("card-artist");
-//             cardPrice.classList.add("card-price");
 
-//             cardImg.innerHTML = `<img src=${producto.img}>`;
-//             cardArtist.innerHTML = `<h4>${producto.artista}</h4>`;
-//             cardTitle.innerHTML = `<h4>${producto.nombre}</h4>`;
-//             cardPrice.innerHTML = `<h4>${producto.precio}</h4>`;
-//             cardText.appendChild(cardTitle);
-//             cardText.appendChild(cardArtist);
-//             cardText.appendChild(cardPrice);
-//             cards.appendChild(cardImg);
-//             cards.appendChild(cardText);
-//             featuredArticles.appendChild(cards);
-//         });
-//     })
 
 
 
