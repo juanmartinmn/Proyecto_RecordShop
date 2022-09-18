@@ -1,8 +1,5 @@
 document.addEventListener("DOMContentLoaded",() =>{
-    carrito = JSON.parse(sessionStorage.getItem("carrito")) || [];
-    cartIndex = JSON.parse(sessionStorage.getItem("cartIndex")) || [];
-    restoreCart();
-    // fetchData();
+    loadProducts(productos);
 })
 
 function loadProducts(){
@@ -122,5 +119,3 @@ function redirectToCheckout(){
         window.location = "./pages/payment.html";
     }
 }
-
-loadProducts(productos);
