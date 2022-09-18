@@ -65,9 +65,11 @@ function addToCart(id,cartIndex){
                     <img src="./img/products/${productos[id].img}" width="70px" height="70px">
                     <div class="cart-text">
                     <b>${productos[id].nombre}</b><br>${productos[id].artista}<br>$${productos[id].precio}
+                    <a href="javascript:removeItem(${cartIndex})"><button class="removeBtn"><i class="bi bi-x-lg"></i> Remove</button></a>
                     </div>
+                     
                     </div>
-                    <a href="javascript:removeItem(${cartIndex})"><button class="removeBtn"><i class="bi bi-x-lg"></i> Remove</button></a> <hr>`;
+                    <hr>`;
     cart.appendChild(li);
     cartTotal += productos[id].precio;
     cartTotalLi.innerHTML = `Subotal: $${cartTotal}`

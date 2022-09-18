@@ -83,24 +83,27 @@ function restoreCart(){
                                 <div class="cart-text">
                                 <b>${carrito[index].nombre}</b><br>${carrito[index].artista}<br>$${carrito[index].precio} 
                                 </div>
+                                <a href="javascript:removeItem(${index})"><button class="removeBtn"><i class="bi bi-x-lg"></i> Remove</button></a>
                             </div>
-                            <a href="javascript:removeItem(${index})"><button class="removeBtn"><i class="bi bi-x-lg"></i> Remove</button></a><hr>`;
+                            <hr>`;
         } else if (window.location.pathname == '/pages/payment.html') {
             li.innerHTML = `<div class="prod-details">
                                 <h3>${cartCounter}</h3> <img src="../img/products/${carrito[index].img}" width="70px" height="70px">
                                 <div class="cart-text">
                                 <b>${carrito[index].nombre}</b><br>${carrito[index].artista}<br>$${carrito[index].precio} 
+                                <a href="javascript:removeItem(${index})"><button class="removeBtn"><i class="bi bi-x-lg"></i> Remove</button></a>
                                 </div>
                             </div>
-                            <a href="javascript:removeItem(${index})"><button class="removeBtn"><i class="bi bi-x-lg"></i> Remove</button></a><hr>`;
+                            <hr>`;
         } else {
             li.innerHTML = `<div class="prod-details">
                                 <h3>${cartCounter}</h3> <img src="./img/products/${carrito[index].img}" width="70px" height="70px">
                                 <div class="cart-text">
                                 <b>${carrito[index].nombre}</b><br>${carrito[index].artista}<br>$${carrito[index].precio} 
+                                <a href="javascript:removeItem(${index})"><button class="removeBtn"><i class="bi bi-x-lg"></i> Remove</button></a>
                                 </div>
                             </div>
-                            <a href="javascript:removeItem(${index})"><button class="removeBtn"><i class="bi bi-x-lg"></i> Remove</button></a><hr>`;
+                            <hr>`;
         } 
         
         cart.appendChild(li);

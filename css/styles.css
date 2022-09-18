@@ -36,7 +36,7 @@ header{
     display: none;
 }
 
-i{
+header i{
     color: white;
 }
 
@@ -249,11 +249,7 @@ header #greenLine{
     justify-content: flex-start;
 }
 
-#cart li{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+
 
 #cart li *{
     margin: 5px;
@@ -532,6 +528,15 @@ footer{
     width: 100%;
     color: white;
 }
+
+hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 96%;               
+    background-color:#FFFF00;
+    height: 1px;
+  }
 
 @media(max-width:768px){
     header #navbar{
