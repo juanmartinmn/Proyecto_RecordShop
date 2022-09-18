@@ -1,8 +1,3 @@
-document.addEventListener("DOMContentLoaded",() =>{
-    restoreCart2();
-    // fetchData();
-})
-
 let form = document.getElementById("form");
 
 form.addEventListener('submit',function(event){

@@ -96,28 +96,6 @@ function restoreCart(){
     }
 }
 
-function restoreCart2(){
-    cartCounter = 1;
-    cartTotal = 0;
-    for (let index = 0; index < carrito.length; index++) {
-        
-        li = document.createElement("li");
-        
-        
-        li.innerHTML = `<h3>${cartCounter}</h3> <img src="../img/products/${carrito[index].img}" width="70px" height="70px"> ${carrito[index].nombre} - ${carrito[index].artista} $${carrito[index].precio} 
-                        <a href="javascript:removeItem(${index})"><button class="removeBtn"><i class="bi bi-x-lg"></i> Remove</button></a>`;
-        cart.appendChild(li);
-        cartTotal += carrito[index].precio;
-        cartTotalLi.innerHTML = `Total: $${cartTotal}`
-        cartCounter++;
-    }
-
-    if(carrito.length==0){
-        cartTotal = 0;
-        cartTotalLi.innerHTML = `Total: $${cartTotal}`
-    }
-}
-
 function removeItem(i){
     ul = document.getElementById("cart");
     ul.innerHTML = ``;

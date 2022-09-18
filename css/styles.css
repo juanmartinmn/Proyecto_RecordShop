@@ -420,6 +420,6 @@ header #greenLine{
     background-color: rgb(150, 150, 150);
 }
 
-#fName{
-
+@media(max-width:768px){
+    
 }
