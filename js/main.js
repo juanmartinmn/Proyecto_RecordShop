@@ -77,7 +77,7 @@ function restoreCart(){
         
         li = document.createElement("li");
         
-        if (window.location == "./payment.html") {
+        if (window.location.pathname == "/pages/payment.html") {
             li.innerHTML = `<h3>${cartCounter}</h3> <img src="../img/products/${carrito[index].img}" width="70px" height="70px"> ${carrito[index].nombre} - ${carrito[index].artista} $${carrito[index].precio} 
                         <a href="javascript:removeItem(${index})"><button class="removeBtn"><i class="bi bi-x-lg"></i> Remove</button></a>`;
         } else{
