@@ -30,6 +30,10 @@ header{
     background-color: transparent;
 }
 
+#navbarMobile{
+    display: none;
+}
+
 header #navbar{
     display: flex;
     justify-content: space-around;
@@ -41,7 +45,7 @@ header #navbar{
     z-index: 3;
 }
 
-header #navbar button{
+header button{
     background-color: transparent;
     border: none;
     font-size: 42px;
@@ -65,7 +69,7 @@ header nav ul li a{
     color: #1a6947;
     padding: 5px;
     font-size: 1.2em;
-    font-weight: bold;
+    
 }
 
 header a:hover{
@@ -421,5 +425,30 @@ header #greenLine{
 }
 
 @media(max-width:768px){
-    
+    header #navbar{
+        display: none;
+    }
+
+    header #greenLine{
+        display: none;
+    }
+
+    #navbarMobile{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        background-color: transparent;
+        width: 100%;
+        z-index: 3;
+    }
+
+    #navbarMobile .logo{
+        height: 2em;
+    }
+    .navbar{
+        width: 100%;
+    }
+
 }
