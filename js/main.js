@@ -76,9 +76,14 @@ function restoreCart(){
         
         li = document.createElement("li");
         
-        
-        li.innerHTML = `<h3>${cartCounter}</h3> <img src="./img/products/${carrito[index].img}" width="70px" height="70px"> ${carrito[index].nombre} - ${carrito[index].artista} $${carrito[index].precio} 
+        if (window.location == "./payment.html") {
+            li.innerHTML = `<h3>${cartCounter}</h3> <img src="../img/products/${carrito[index].img}" width="70px" height="70px"> ${carrito[index].nombre} - ${carrito[index].artista} $${carrito[index].precio} 
                         <a href="javascript:removeItem(${index})"><button class="removeBtn"><i class="bi bi-x-lg"></i> Remove</button></a>`;
+        } else{
+            li.innerHTML = `<h3>${cartCounter}</h3> <img src="./img/products/${carrito[index].img}" width="70px" height="70px"> ${carrito[index].nombre} - ${carrito[index].artista} $${carrito[index].precio} 
+                        <a href="javascript:removeItem(${index})"><button class="removeBtn"><i class="bi bi-x-lg"></i> Remove</button></a>`;
+        }
+        
         cart.appendChild(li);
         cartTotal += carrito[index].precio;
         cartTotalLi.innerHTML = `Total: $${cartTotal}`

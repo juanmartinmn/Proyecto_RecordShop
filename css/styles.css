@@ -119,6 +119,7 @@ header #greenLine{
     background-repeat: no-repeat;
     background-position: top right;
     color: whitesmoke;
+    margin: 5px;
 }
 
 #grid1{
@@ -129,6 +130,7 @@ header #greenLine{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
+    margin: 5px;
 
 }
 
@@ -140,6 +142,7 @@ header #greenLine{
     justify-content: center;
     align-items: center;
     padding: 5px;
+    margin: 5px;
 }
 
 #grid3{
@@ -150,6 +153,7 @@ header #greenLine{
     justify-content: center;
     align-items: center;
     padding: 5px;
+    margin: 5px;
 }
 
 #grid4-img{
@@ -163,6 +167,7 @@ header #greenLine{
     -webkit-filter: blur(5px);
     filter: blur(5px);
     z-index: 0;
+    margin: 5px;
 }
 
 #grid4-text{
@@ -398,4 +403,23 @@ header #greenLine{
 
 #payment{
     margin-top: 90px;
+    background-color: rgb(240, 240, 240);
+}
+
+#formSec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    padding: 10px;
+    background-color: rgb(150, 150, 150);
+}
+
+#fName{
+
 }
