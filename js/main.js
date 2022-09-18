@@ -78,25 +78,40 @@ function restoreCart(){
         li = document.createElement("li");
         
         if (window.location.pathname == '/Proyecto_RecordShop/pages/payment.html') {
-            li.innerHTML = `<h3>${cartCounter}</h3> <img src="../img/products/${carrito[index].img}" width="70px" height="70px"> ${carrito[index].nombre} - ${carrito[index].artista} $${carrito[index].precio} 
-                        <a href="javascript:removeItem(${index})"><button class="removeBtn"><i class="bi bi-x-lg"></i> Remove</button></a>`;
+            li.innerHTML = `<div class="prod-details">
+                                <h3>${cartCounter}</h3> <img src="../img/products/${carrito[index].img}" width="70px" height="70px">
+                                <div class="cart-text">
+                                <b>${carrito[index].nombre}</b><br>${carrito[index].artista}<br>$${carrito[index].precio} 
+                                </div>
+                            </div>
+                            <a href="javascript:removeItem(${index})"><button class="removeBtn"><i class="bi bi-x-lg"></i> Remove</button></a><hr>`;
         } else if (window.location.pathname == '/pages/payment.html') {
-            li.innerHTML = `<h3>${cartCounter}</h3> <img src="../img/products/${carrito[index].img}" width="70px" height="70px"> ${carrito[index].nombre} - ${carrito[index].artista} $${carrito[index].precio} 
-                        <a href="javascript:removeItem(${index})"><button class="removeBtn"><i class="bi bi-x-lg"></i> Remove</button></a>`;
+            li.innerHTML = `<div class="prod-details">
+                                <h3>${cartCounter}</h3> <img src="../img/products/${carrito[index].img}" width="70px" height="70px">
+                                <div class="cart-text">
+                                <b>${carrito[index].nombre}</b><br>${carrito[index].artista}<br>$${carrito[index].precio} 
+                                </div>
+                            </div>
+                            <a href="javascript:removeItem(${index})"><button class="removeBtn"><i class="bi bi-x-lg"></i> Remove</button></a><hr>`;
         } else {
-            li.innerHTML = `<h3>${cartCounter}</h3> <img src="./img/products/${carrito[index].img}" width="70px" height="70px"> ${carrito[index].nombre} - ${carrito[index].artista} $${carrito[index].precio} 
-            <a href="javascript:removeItem(${index})"><button class="removeBtn"><i class="bi bi-x-lg"></i> Remove</button></a>`;
+            li.innerHTML = `<div class="prod-details">
+                                <h3>${cartCounter}</h3> <img src="./img/products/${carrito[index].img}" width="70px" height="70px">
+                                <div class="cart-text">
+                                <b>${carrito[index].nombre}</b><br>${carrito[index].artista}<br>$${carrito[index].precio} 
+                                </div>
+                            </div>
+                            <a href="javascript:removeItem(${index})"><button class="removeBtn"><i class="bi bi-x-lg"></i> Remove</button></a><hr>`;
         } 
         
         cart.appendChild(li);
         cartTotal += carrito[index].precio;
-        cartTotalLi.innerHTML = `Total: $${cartTotal}`
+        cartTotalLi.innerHTML = `Subtotal: $${cartTotal}`
         cartCounter++;
     }
 
     if(carrito.length==0){
         cartTotal = 0;
-        cartTotalLi.innerHTML = `Total: $${cartTotal}`
+        cartTotalLi.innerHTML = `Subtotal: $${cartTotal}`
     }
 }
 

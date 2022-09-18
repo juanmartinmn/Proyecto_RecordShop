@@ -59,12 +59,18 @@ function loadProducts(){
 
 function addToCart(id,cartIndex){
     let li = document.createElement("li");
-    li.innerHTML = `<h3>${cartCounter}</h3><img src="./img/products/${productos[id].img}" width="70px" height="70px">
-                    ${productos[id].nombre} - ${productos[id].artista} $${productos[id].precio}
-                    <a href="javascript:removeItem(${cartIndex})"><button class="removeBtn"><i class="bi bi-x-lg"></i> Remove</button></a>`;
+    li.innerHTML = `
+                    <div class="prod-details">
+                    <h3>${cartCounter}</h3>
+                    <img src="./img/products/${productos[id].img}" width="70px" height="70px">
+                    <div class="cart-text">
+                    <b>${productos[id].nombre}</b><br>${productos[id].artista}<br>$${productos[id].precio}
+                    </div>
+                    </div>
+                    <a href="javascript:removeItem(${cartIndex})"><button class="removeBtn"><i class="bi bi-x-lg"></i> Remove</button></a> <hr>`;
     cart.appendChild(li);
     cartTotal += productos[id].precio;
-    cartTotalLi.innerHTML = `Total: $${cartTotal}`
+    cartTotalLi.innerHTML = `Subotal: $${cartTotal}`
     carrito.push(productos[id]);
     saveCart();
     toast();
